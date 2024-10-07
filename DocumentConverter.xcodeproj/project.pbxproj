@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D136121D2CAEF0F200103706 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D136121C2CAEF0F200103706 /* SDWebImage */; };
+		D136121F2CAEF0F500103706 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D136121E2CAEF0F500103706 /* SDWebImageMapKit */; };
+		D13612212CAEF0F900103706 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D13612202CAEF0F900103706 /* Swinject */; };
+		D13612232CAEF0FD00103706 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D13612222CAEF0FD00103706 /* Swinject-Dynamic */; };
+		D13612252CAEF0FD00103706 /* Swinject-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D13612222CAEF0FD00103706 /* Swinject-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D13611D22CAE986800103706 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,6 +30,20 @@
 			remoteInfo = DocumentConverter;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D13612242CAEF0FD00103706 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D13612252CAEF0FD00103706 /* Swinject-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D13611BB2CAE986600103706 /* DocumentConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocumentConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D136121F2CAEF0F500103706 /* SDWebImageMapKit in Frameworks */,
+				D13612232CAEF0FD00103706 /* Swinject-Dynamic in Frameworks */,
+				D136121D2CAEF0F200103706 /* SDWebImage in Frameworks */,
+				D13612212CAEF0F900103706 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +117,7 @@
 				D13611BD2CAE986600103706 /* DocumentConverter */,
 				D13611D42CAE986800103706 /* DocumentConverterTests */,
 				D13611DE2CAE986800103706 /* DocumentConverterUITests */,
+				D136121B2CAEF0F200103706 /* Frameworks */,
 				D13611BC2CAE986600103706 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +132,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D136121B2CAEF0F200103706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +149,7 @@
 				D13611B72CAE986600103706 /* Sources */,
 				D13611B82CAE986600103706 /* Frameworks */,
 				D13611B92CAE986600103706 /* Resources */,
+				D13612242CAEF0FD00103706 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +160,10 @@
 			);
 			name = DocumentConverter;
 			packageProductDependencies = (
+				D136121C2CAEF0F200103706 /* SDWebImage */,
+				D136121E2CAEF0F500103706 /* SDWebImageMapKit */,
+				D13612202CAEF0F900103706 /* Swinject */,
+				D13612222CAEF0FD00103706 /* Swinject-Dynamic */,
 			);
 			productName = DocumentConverter;
 			productReference = D13611BB2CAE986600103706 /* DocumentConverter.app */;
@@ -208,6 +247,10 @@
 			);
 			mainGroup = D13611B22CAE986600103706;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D13612152CAEEF2900103706 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D13612162CAEEF7B00103706 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D13611BC2CAE986600103706 /* Products */;
 			projectDirPath = "";
@@ -569,6 +612,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D13612152CAEEF2900103706 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		D13612162CAEEF7B00103706 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D136121C2CAEF0F200103706 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D13612162CAEEF7B00103706 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		D136121E2CAEF0F500103706 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D13612162CAEEF7B00103706 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		D13612202CAEF0F900103706 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D13612152CAEEF2900103706 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D13612222CAEF0FD00103706 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D13612152CAEEF2900103706 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D13611B32CAE986600103706 /* Project object */;
 }
